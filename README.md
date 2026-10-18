@@ -1,59 +1,74 @@
-# HelloAngular
+Angular Product Management App (Лабораторна робота №3)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.3.
+Односторінковий вебзастосунок (SPA) для управління каталогом товарів, розроблений на фреймворку Angular 18+ із використанням сучасних підходів розробки (Standalone Components, Signals, Reactive Forms, Vitest/Jasmine).
 
-## Development server
+🛠 Технологічний стек
 
-To start a local development server, run:
+Фреймворк: Angular (Standalone Architecture)
 
-```bash
-ng serve
-```
+Мова: TypeScript
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Управління станом: Angular Signals (signal, computed)
 
-## Code scaffolding
+Робота з формами/даними: Reactive Forms (з клієнтською валідацією)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Маршрутизація: Angular Router (з підтримкою динамічних параметрів :id)
 
-```bash
-ng generate component component-name
-```
+Сервісний шар: RxJS, Singleton-сервіси (ProductsService)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Тестування: Vitest / Jasmine & Karma (TestBed)
 
-```bash
-ng generate --help
-```
+ Інструкція із запуску
 
-## Building
+Попередні вимоги
 
-To build the project run:
+Переконайтеся, що на вашому ПК встановлено Node.js (версії 18.x або новішої).
 
-```bash
-ng build
-```
+1. Клонування репозиторію
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+git clone <ПОСИЛАННЯ_НА_ВАШ_РЕПОЗИТОРІЙ>
+cd hello-angular
 
-## Running unit tests
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+2. Встановлення залежностей
 
-```bash
-ng test
-```
+npm install
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+3. Запуск локального сервера розробки
 
-```bash
-ng e2e
-```
+npx ng serve
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+Після успішної збірки відкрийте браузер за адресою:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+http://localhost:4200/
+
+4. Запуск юніт-тестів
+
+Для запуску модульних тестів виконайте команду:
+
+npx ng test
+
+
+ Структура проєкту
+
+src/app/
+├── home/                   # Головна сторінка застосунку
+├── products-list/          # Каталог товарів (Signals, @for, фільтрація за категоріями)
+├── product-details/        # Деталі товару (динамічний маршрут /products/:id)
+├── product-form/           # Форма додавання товару (Reactive Forms, валідація)
+├── products.ts             # Сервіс ProductsService та інтерфейс Product
+├── app.routes.ts           # Конфігурація маршрутизації Angular Router
+└── app.config.ts           # Глобальна конфігурація додатка (HttpClient, Router)
+
+
+ Основні можливості
+
+Відображення каталогу: Отримання списку товарів та динамічна фільтрація за категоріями без зайвих запитів до сервера за допомогою computed().
+
+Перегляд деталей: Перехід на окрему сторінку конкретного товару за його унікальним id.
+
+Додавання товарів: Форма з клієнтською валідацією (перевірка обов'язкових полів та коректності ціни).
+
+Повне покриття тестами: Усі компоненти та сервіс покриті автоматичними юніт-тестами (TestBed).
