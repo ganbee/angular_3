@@ -26,7 +26,7 @@ Angular Product Management App (Лабораторна робота №3)
 
 1. Клонування репозиторію
 
-git clone <ПОСИЛАННЯ_НА_ВАШ_РЕПОЗИТОРІЙ>
+git clone <https://github.com/ganbee/angular_3/>
 cd hello-angular
 
 
