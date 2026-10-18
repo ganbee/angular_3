@@ -2,7 +2,7 @@ Angular Product Management App (Лабораторна робота №3)
 
 Односторінковий вебзастосунок (SPA) для управління каталогом товарів, розроблений на фреймворку Angular 18+ із використанням сучасних підходів розробки (Standalone Components, Signals, Reactive Forms, Vitest/Jasmine).
 
-🛠 Технологічний стек
+ Технологічний стек
 
 Фреймворк: Angular (Standalone Architecture)
 
